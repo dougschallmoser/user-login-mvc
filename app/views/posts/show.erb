@@ -1,4 +1,4 @@
-<h5><%= "You are logged in as #{session[:email]}." if session[:email] %></h5>
+<h5><%= "You are currently logged in as #{session[:email]}." if session[:email] %></h5>
 <h1><%= @post.title %></h1>
 <h3>By: <%= @post.user.name %></h3>
 
@@ -10,3 +10,7 @@
      <input type="submit" value="Edit Post">
     </form>
 </p>
+
+<p><form method="get" action="/posts">
+    <input type="submit" value="View All Posts">
+</form>

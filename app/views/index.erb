@@ -1,10 +1,10 @@
-<h5><%= "You are logged in as #{session[:email]}." if session[:email] %></h5>
+<h5><%= "You are currently logged in as #{session[:email]}." if session[:email] %></h5>
 
 <h1>Welcome!</h1>
 <h3>You can view all public posts, sign up, or login!</h3>
 
 <p><form method="get" action="/posts">
-    <input type="submit" value="View Posts">
+    <input type="submit" value="View All Posts">
 </form>
 <form method="get" action="/signup">
     <input type="submit" value="Sign Up">

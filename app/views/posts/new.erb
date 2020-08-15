@@ -1,13 +1,14 @@
-<h5><%= "You are logged in as #{session[:email]}." if session[:email] %></h5>
+<h5><%= "You are currently logged in as #{session[:email]}." if session[:email] %></h5>
 <h1>Create New Post</h1>
 <br>
 <form method="POST" action="/posts">
     <label for="title">Title:</label>
     <input type="text" id="title" name="post[title]">
     <br>
-    <label for="content">Content:</label>
-    <input type="text" id="content" name="post[content]" size="50">
-    <br>
+    <p>
+        <label for="content">Content:</label><br>
+        <textarea id="content" name="post[content]" rows="20" cols="60"></textarea>
+    </p>
     <p>
     <input type="submit" value="Create Post">
     </p>
