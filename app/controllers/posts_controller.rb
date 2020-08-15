@@ -28,4 +28,12 @@ class PostsController < ApplicationController
         erb :"posts/show"
     end
 
+    get '/posts/:id/edit' do
+        if logged_in?
+            erb :"posts/edit"
+        else 
+            redirect "/login"
+        end
+    end
+
 end 
