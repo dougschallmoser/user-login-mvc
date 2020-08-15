@@ -3,3 +3,10 @@
 <% @posts.each_with_index do |post, index| %>
 <%=index + 1%>. <a href="/posts/<%=post.id%>"><%= post.title %></a>
 <% end %>
+<br>
+<p><form method="get" action="/posts/new">
+     <input type="submit" value="Create New Post">
+    </form>
+</p>
+<br>
+Don't have an account? Click <a href="/signup">HERE</a> to sign up!

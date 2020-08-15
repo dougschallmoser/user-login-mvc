@@ -4,3 +4,8 @@
 <p>
     <%= @post.content %>
 </p>
+<br>
+<p><form method="get" action="/posts/<%=@post.id%>/edit">
+     <input type="submit" value="Edit Post">
+    </form>
+</p>
