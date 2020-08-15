@@ -43,7 +43,7 @@ class PostsController < ApplicationController
     end
 
     patch '/posts/:id' do
-        @post = Post.find_by_id(params[:id])
+        @post = Post.find_by(id: params[:id])
         @post.update(params[:post])
         redirect "/posts/#{@post.id}"
     end
