@@ -1,5 +1,4 @@
 <h1>Log In</h1>
-<h4 style="color:red;"><%= "Fields required: name, email and password" if @user && @user.errors.any? %></h4>
 <form method="POST" action="/sessions">
     <label for="email">Email:</label>
     <input type="text" id="email" name="email">
@@ -10,4 +9,4 @@
     <p><input type="submit" value="Login"></p>
 </form>
 
-Don't have an account? Click <a href="/signup">HERE</a> to sign up!
+Don't have an account? <a href="/signup">Sign Up</a> today!
