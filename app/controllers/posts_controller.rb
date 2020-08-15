@@ -19,19 +19,20 @@ class PostsController < ApplicationController
 
     post '/posts' do 
         post = Post.new(params[:post])
+        post.user = current_user
         post.save
         redirect "/posts/#{post.id}"
     end
 
     get '/posts/:id' do 
-        @post = Post.find_by_id(params[:id])
+        @post = Post.find_by(id: params[:id])
         erb :"posts/show"
     end
 
     get '/posts/:id/edit' do
-        @post = Post.find_by_id(params[:id])
+        @post = Post.find_by(id: params[:id])
         if logged_in?
-            if @post = current_user.posts.find_by(params[:id])
+            if @post = current_user.posts.find_by(id: params[:id])
                 erb :"posts/edit"
             else
                 redirect "/posts"

@@ -1,6 +1,10 @@
 class ApplicationController < Sinatra::Base
 
-    set :views, "app/views"
+    configure do
+        enable :sessions
+        set :session_secret, "secret"
+        set :views, "app/views"
+      end
 
     helpers do
 
